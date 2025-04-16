@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 
 # CSV 파일 경로 (사용자 환경에 맞게 수정)
-csv_path = r'C:\Users\admin\Desktop\1D-CNN\Liftupdown2_process data.csv'
+csv_path = r'C:\Users\admin\Desktop\1D-CNN\Liftupdown2_chronologize.csv'
 
 # CSV 파일 읽기
 df = pd.read_csv(csv_path)
@@ -45,7 +45,7 @@ df_augmented = pd.concat([df_packvolt, df_current], axis=1)
 df_augmented.insert(0, 'A', 0)
 
 # 저장할 CSV 파일 경로 (원하는 경로로 수정)
-output_csv_path = r'C:\Users\admin\Desktop\1D-CNN\augmented_data_windows_individual_noheader.csv'
+output_csv_path = r'C:\Users\admin\Desktop\1D-CNN\augmentation_data_windows_Liftupdown2_5s.csv'
 
 # header=False를 사용하여 CSV 파일에 열 이름을 저장하지 않음
 df_augmented.to_csv(output_csv_path, index=False, header=False)
