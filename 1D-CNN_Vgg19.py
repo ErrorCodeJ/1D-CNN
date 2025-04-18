@@ -120,7 +120,7 @@ if __name__ == '__main__':
     criterion = nn.BCELoss()
     optimizer = optim.Adam(model.parameters(), lr=1e-4)
     
-    for ep in range(1, 10000):
+    for ep in range(1, 100):
         tl = train_loop(model, train_loader, criterion, optimizer, device)
         vl, acc = eval_loop(model, test_loader, criterion, device)
         print(f"Epoch {ep:02d} | Train Loss: {tl:.4f} | Val Loss: {vl:.4f} | Acc: {acc:.2f}%")
