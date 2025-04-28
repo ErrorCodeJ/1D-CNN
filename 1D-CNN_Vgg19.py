@@ -130,3 +130,4 @@ if __name__ == '__main__':
     ax1.legend(lines1 + lines2, labels1 + labels2, loc='upper right')  # 레전드 합치기
     plt.title('Loss and Accuracy over Epochs')  # 그래프 제목
     plt.show()  # 그래프 출력
+    
